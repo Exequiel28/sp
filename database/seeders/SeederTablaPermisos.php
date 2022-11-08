@@ -34,6 +34,38 @@ class SeederTablaPermisos extends Seeder
              'crear-inventario',
              'editar-inventario',
              'borrar-inventario',
+
+             'ver-clientes',
+             'crear-clientes',
+             'editar-clientes',
+             'borrar-clientes',
+
+             'ver-productos',
+             'crear-productos',
+             'editar-productos',
+             'borrar-productos',
+
+             'ver-pedidos',
+             'crear-pedidos',
+             'editar-pedidos',
+             'borrar-pedidos',
+
+             'ver-ordenes',
+             'crear-ordenes',
+             'editar-ordenes',
+             'borrar-ordenes',
+
+             'ver-facturacion',
+             'crear-facturacion',
+             'editar-facturacion',
+             'borrar-facturacion',
+
+             'ver-diseño',
+             'ver-impresion',
+             'ver-acabado',
+             'ver-especial',
+
+
         ];
 
         foreach($permisos as $permiso) {

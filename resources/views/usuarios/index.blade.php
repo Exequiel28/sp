@@ -13,7 +13,7 @@
                           <a class="btn btn-warning" href="{{ route('usuarios.create') }}">Nuevo</a>        
                          
                             <table class="table table-striped mt-2">
-                              <thead style="background-color:#6777ef">                                     
+                              <thead style="background-color:#009bdb">                                     
                                   <th style="display: none;">ID</th>
                                   <th style="color:#fff;">Nombre</th>
                                   <th style="color:#fff;">E-mail</th>
@@ -35,10 +35,10 @@
                                     </td>
 
                                     <td>                                  
-                                      <a class="btn btn-info" href="{{ route('usuarios.edit',$usuario->id) }}">Editar</a>
+                                      <a href="{{ route('usuarios.edit',$usuario->id) }}"><i class="btnp fas fa-pencil-alt"></i></a>
 
                                       {!! Form::open(['method' => 'DELETE','route' => ['usuarios.destroy', $usuario->id],'style'=>'display:inline']) !!}
-                                          {!! Form::submit('Borrar', ['class' => 'btn btn-danger']) !!}
+                                          {!! Form::submit('Borrar', ['class' => 'btn btn-sm btn-danger']) !!}
                                       {!! Form::close() !!}
                                     </td>
                                   </tr>

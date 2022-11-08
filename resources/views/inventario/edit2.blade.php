@@ -3,7 +3,7 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h3 class="page__heading">Modificar Inventario</h3>
+            <h3 class="page__heading">Modificar Este Inventario</h3>
         </div>
         <div class="section-body">
             <div class="row">
@@ -24,9 +24,9 @@
                         @endif
 
                     
-                        <form action="{{ route('inventario.update',$inventario->id) }}" method="POST">
+                        <form action="{{ route('inventario.update2',$inventario->id) }}" method="POST">
                         @csrf
-                        @method('PUT')
+                        @method('POST')
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Providers;
-
+use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 //Para la paginacion
@@ -28,5 +28,11 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         Paginator::useBootstrap();
+
+        Carbon::setLocale('es');
+        Carbon::setUTF8(true);
+        setLocale(LC_TIME, 'es_ES');
+
+
     }
 }

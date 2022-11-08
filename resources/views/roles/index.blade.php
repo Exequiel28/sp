@@ -17,7 +17,7 @@
         
                 
                             <table class="table table-striped mt-2">
-                                <thead style="background-color:#6777ef">                                                       
+                                <thead style="background-color:#009bdb">                                                       
                                     <th style="color:#fff;">Rol</th>
                                     <th style="color:#fff;">Acciones</th>
                                 </thead>  
@@ -27,12 +27,12 @@
                                     <td>{{ $role->name }}</td>
                                     <td>                                
                                         @can('editar-rol')
-                                            <a class="btn btn-primary" href="{{ route('roles.edit',$role->id) }}">Editar</a>
+                                            <a href="{{ route('roles.edit',$role->id) }}"><i class="btnp fas fa-pencil-alt"></i></a>
                                         @endcan
                                         
                                         @can('borrar-rol')
                                             {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
-                                                {!! Form::submit('Borrar', ['class' => 'btn btn-danger formulario-eliminar']) !!}
+                                                {!! Form::submit('Borrar', ['class' => 'btn btn-sm btn-danger formulario-eliminar']) !!}
                                             {!! Form::close() !!}
                                         @endcan
                                     </td>

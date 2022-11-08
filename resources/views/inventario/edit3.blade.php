@@ -22,11 +22,15 @@
                             </button>
                             </div>
                         @endif
-
+                            @if(session()->has('message'))
+                                <div class="alert alert-danger">
+                                    {{ session('message') }}
+                                </div>
+                            @endif
                     
-                        <form action="{{ route('inventario.update',$inventario->id) }}" method="POST">
+                        <form action="{{ route('inventario.update3',$inventario->id) }}" method="POST">
                         @csrf
-                        @method('PUT')
+                        @method('POST')
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">

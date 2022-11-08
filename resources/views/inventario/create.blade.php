@@ -23,9 +23,25 @@
                             </div>
                         @endif
 
+                        {{-- Message --}}
+            @if(session()->has('message'))
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                    <i class="fa fa-times"></i>
+                </button>
+            {{ session('message') }}
+                </div>
+            @endif
+
                     <form action="{{ route('inventario.store') }}" method="POST">
                         @csrf
                         <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                                   <label for="cod">Codigo</label>
+                                   <input type="text" name="cod" class="form-control">
+                                </div>
+                            </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                                    <label for="nombre">Nombre</label>
